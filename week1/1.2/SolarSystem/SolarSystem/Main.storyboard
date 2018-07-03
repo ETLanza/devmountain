@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XZS-V8-Bwq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Planet Table View Controller-->
+        <scene sceneID="3cl-Hu-f1A">
+            <objects>
+                <tableViewController id="w1p-sY-GRN" customClass="PlanetTableViewController" customModule="SolarSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="120" sectionFooterHeight="28" id="ric-QV-s7y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanetTableViewCell" rowHeight="50" id="Rqd-e0-sQw" customClass="PlanetTableViewCell" customModule="SolarSystem" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="120" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rqd-e0-sQw" id="hHn-dv-9zg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j1o-wf-zkh">
+                                            <rect key="frame" x="20" y="0.0" width="157.5" height="50.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Yj-z8-e6p">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="B9v-4e-hah"/>
+                                                        <constraint firstAttribute="width" constant="50" id="IUs-bg-yrz"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planet Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eO-5z-8cw">
+                                                    <rect key="frame" x="60" y="15" width="97.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="j1o-wf-zkh" firstAttribute="centerY" secondItem="hHn-dv-9zg" secondAttribute="centerY" id="II5-WT-txo"/>
+                                        <constraint firstItem="j1o-wf-zkh" firstAttribute="leading" secondItem="hHn-dv-9zg" secondAttribute="leadingMargin" id="cJ2-jr-Fs9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" label="PlanetTableViewCell">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <outlet property="planetImageView" destination="9Yj-z8-e6p" id="qKP-3d-blR"/>
+                                    <outlet property="planetNameLabel" destination="7eO-5z-8cw" id="aqi-ug-ajd"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toDetailVC" id="Zj5-o5-zJ3"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="w1p-sY-GRN" id="6TL-rE-Ye1"/>
+                            <outlet property="delegate" destination="w1p-sY-GRN" id="Bhc-6o-gMf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Eo0-b7-IGu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X1d-iQ-gIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="133.5832083958021"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="BYZ-38-t0r" customClass="DetailViewController" customModule="SolarSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tm9-lj-m3E">
+                                <rect key="frame" x="0.0" y="64" width="375" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Vjl-fd-xDb"/>
+                                    <constraint firstAttribute="height" constant="201" id="vsK-RH-jik"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6T-Lo-PVD">
+                                <rect key="frame" x="163" y="290" width="49" height="23.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3c-A9-UiP">
+                                <rect key="frame" x="163" y="338.5" width="49" height="23.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdC-dU-6LF">
+                                <rect key="frame" x="163" y="387" width="49" height="23.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tm9-lj-m3E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="INd-Tu-Szn"/>
+                            <constraint firstItem="i3c-A9-UiP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NsL-7Y-FAi"/>
+                            <constraint firstItem="d6T-Lo-PVD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aA4-AG-Pyy"/>
+                            <constraint firstItem="d6T-Lo-PVD" firstAttribute="top" secondItem="Tm9-lj-m3E" secondAttribute="bottom" constant="25" id="aMd-df-S6Z"/>
+                            <constraint firstItem="hdC-dU-6LF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jlw-FP-D0E"/>
+                            <constraint firstItem="hdC-dU-6LF" firstAttribute="top" secondItem="i3c-A9-UiP" secondAttribute="bottom" constant="25" id="lCR-Eb-OpO"/>
+                            <constraint firstItem="i3c-A9-UiP" firstAttribute="top" secondItem="d6T-Lo-PVD" secondAttribute="bottom" constant="25" id="oet-3C-wwV"/>
+                            <constraint firstItem="Tm9-lj-m3E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yHe-f2-Q8Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dayLengthLabel" destination="i3c-A9-UiP" id="wOh-ys-4gA"/>
+                        <outlet property="diameterLabel" destination="hdC-dU-6LF" id="QS9-Mp-UUz"/>
+                        <outlet property="distanceFromSunLabel" destination="d6T-Lo-PVD" id="074-RW-WpO"/>
+                        <outlet property="planetImageView" destination="Tm9-lj-m3E" id="tAB-Ab-VUy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tem-0W-4yB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XZS-V8-Bwq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l9f-fC-Fk8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w1p-sY-GRN" kind="relationship" relationship="rootViewController" id="dhN-Ck-IEg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSt-d2-1IZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599.20000000000005" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
