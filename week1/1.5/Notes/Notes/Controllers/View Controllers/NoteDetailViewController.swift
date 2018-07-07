@@ -10,10 +10,13 @@ import UIKit
 
 class NoteDetailViewController: UIViewController {
  
-    //MARK: - IBOutlet
+    //MARK: - Properties
+    var note: Note?
+    
+    //MARK: IBOutlet
     @IBOutlet weak var bodyTextView: UITextView!
     
-    //MARK: - IBAction
+    //MARK: IBAction
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         guard let text = bodyTextView.text, text != "" else { return }
         if let note = self.note {
@@ -21,14 +24,13 @@ class NoteDetailViewController: UIViewController {
         } else {
             NoteController.shared.addNote(Note.init(bodyText: text))
         }
-        let _ = navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
-    //MARK: - Properties
-    var note: Note?
-    
+    //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("VIEWDIDLOAD")
         if note != nil {
             bodyTextView.text = note?.bodyText
         }

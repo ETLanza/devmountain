@@ -12,6 +12,7 @@ class Note: Equatable, Codable {
    
     //MARK: - Properties
     var bodyText: String
+    
     init(bodyText: String) {
         self.bodyText = bodyText
     }

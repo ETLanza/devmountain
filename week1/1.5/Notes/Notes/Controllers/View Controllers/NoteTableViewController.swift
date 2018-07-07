@@ -10,10 +10,15 @@ import UIKit
 
 class NoteTableViewController: UITableViewController {
     
-    //MARK: - IBOutlets
+    //MARK: - Properties
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    var filteredNotes: [Note] = []
+    
+    //MARK: IBOutlets
     @IBOutlet weak var editBarButton: UIBarButtonItem!
     
-    //MARK: - IBActions
+    //MARK: IBActions
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
         if  tableView.isEditing {
             tableView.setEditing(false, animated: true);
@@ -27,11 +32,7 @@ class NoteTableViewController: UITableViewController {
         }
     }
     
-    //MARK: - Properties
-    let searchController = UISearchController(searchResultsController: nil)
-    
-    var filteredNotes = [Note]()
-    
+    //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         NoteController.shared.loadFromPersistentStore()
@@ -64,11 +65,13 @@ class NoteTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if isFiltering() {
-            if editingStyle == .delete {
-                let note = findCorrectNote(withIndex: indexPath)
+        let note = findCorrectNote(withIndex: indexPath)
+        if editingStyle == .delete {
+            if isFiltering() {
                 NoteController.shared.deleteNote(note)
-                tableView.reloadData()
+                searchController.searchResultsUpdater?.updateSearchResults(for: searchController)
+            } else {
+                NoteController.shared.deleteNote(note)
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
@@ -99,11 +102,6 @@ class NoteTableViewController: UITableViewController {
     }
     
     func isFiltering() -> Bool {
-        if tableView.isEditing {
-            tableView.setEditing(false, animated: true)
-            editBarButton.title = "Edit";
-            editBarButton.style = UIBarButtonItemStyle.plain;
-        }
         return searchController.isActive && !searchBarIsEmpty()
     }
     

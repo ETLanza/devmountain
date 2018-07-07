@@ -10,9 +10,10 @@ import Foundation
 
 class NoteController: Codable {
     
+    //MARK: - Properties
     static let shared = NoteController()
     
-    var notes = [Note]()
+    var notes: [Note] = []
     
     //MARK: - CRUD Methods
     func addNote(_ note: Note) {
