@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  FriendRater
+//  ToDo
 //
-//  Created by Jayden Garrick on 7/7/18.
-//  Copyright © 2018 Jayden Garrick. All rights reserved.
+//  Created by Eric Lanza on 7/7/18.
+//  Copyright © 2018 ETLanza. All rights reserved.
 //
 
 import UIKit
