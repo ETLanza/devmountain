@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v6Y-gX-vmL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="g7w-bw-9OJ">
+            <objects>
+                <viewController id="v6Y-gX-vmL" customClass="ViewController" customModule="PowerNapTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eE3-sd-I8W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiZ-fn-hyQ">
+                                <rect key="frame" x="119" y="304" width="137.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="50"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byR-DA-vIj">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <color key="backgroundColor" red="0.30588235289999999" green="0.67450980390000004" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="4Nl-Lb-WrF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <state key="normal" title="Start Nap">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopButtonPressed:" destination="v6Y-gX-vmL" eventType="touchUpInside" id="eDp-ZX-6Xu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.216869266" green="0.73670629099999996" blue="0.83251570409999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="byR-DA-vIj" firstAttribute="leading" secondItem="JYa-AC-ILi" secondAttribute="leading" id="3Q8-Io-sRL"/>
+                            <constraint firstItem="JYa-AC-ILi" firstAttribute="trailing" secondItem="byR-DA-vIj" secondAttribute="trailing" id="6Sn-jV-Wvt"/>
+                            <constraint firstItem="MiZ-fn-hyQ" firstAttribute="centerX" secondItem="eE3-sd-I8W" secondAttribute="centerX" id="94V-JW-Uv5"/>
+                            <constraint firstItem="MiZ-fn-hyQ" firstAttribute="centerY" secondItem="eE3-sd-I8W" secondAttribute="centerY" id="F2U-73-XF7"/>
+                            <constraint firstItem="JYa-AC-ILi" firstAttribute="bottom" secondItem="byR-DA-vIj" secondAttribute="bottom" id="ymx-Sf-VnE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JYa-AC-ILi"/>
+                    </view>
+                    <connections>
+                        <outlet property="startStopButton" destination="byR-DA-vIj" id="CN8-eO-gAa"/>
+                        <outlet property="timerLabel" destination="MiZ-fn-hyQ" id="g3X-Na-tfL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHS-Qj-jEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="112.89355322338831"/>
+        </scene>
+    </scenes>
+</document>
