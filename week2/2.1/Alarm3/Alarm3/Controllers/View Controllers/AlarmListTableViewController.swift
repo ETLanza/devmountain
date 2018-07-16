@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlarmListTableViewController: UITableViewController {
+class AlarmListTableViewController: UITableViewController, AlarmScheduler {
     
     //MARK: - Life Cycle Methods
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +33,9 @@ class AlarmListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            AlarmController.shared.delete(alarm: AlarmController.shared.alarms[indexPath.row])
+            let alarm = AlarmController.shared.alarms[indexPath.row]
+            AlarmController.shared.delete(alarm: alarm)
+            cancelUserNotifications(for: alarm)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -53,6 +55,11 @@ extension AlarmListTableViewController: SwitchTableViewCellDelegate {
     func switchCellSwitchValueChanged(cell: SwitchTableViewCell){
         guard let alarm = cell.alarm else { return }
         AlarmController.shared.toggleEnabled(for: alarm)
+        if alarm.enabled {
+            scheduleUserNotifications(for: alarm)
+        } else {
+            cancelUserNotifications(for: alarm)
+        }
         tableView.reloadData()
     }
 }

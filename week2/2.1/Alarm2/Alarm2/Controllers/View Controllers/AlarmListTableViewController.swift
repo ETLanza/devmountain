@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlarmListTableViewController: UITableViewController {
+class AlarmListTableViewController: UITableViewController, AlarmScheduler {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -16,13 +16,13 @@ class AlarmListTableViewController: UITableViewController {
     }
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AlarmContontroller.shared.alarms.count
+        return AlarmController.shared.alarms.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SwitchTableViewCell", for: indexPath) as? SwitchTableViewCell else { return UITableViewCell() }
         
-        cell.alarm = AlarmContontroller.shared.alarms[indexPath.row]
+        cell.alarm = AlarmController.shared.alarms[indexPath.row]
         cell.updateViews()
         cell.delegate = self
         
@@ -32,7 +32,9 @@ class AlarmListTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            AlarmContontroller.shared.alarms.remove(at: indexPath.row)
+            
+            AlarmController.shared.alarms.remove(at: indexPath.row)
+            cancelUserNotifications(for: AlarmController.shared.alarms[indexPath.row])
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
         }
@@ -43,7 +45,7 @@ class AlarmListTableViewController: UITableViewController {
         if segue.identifier == "editAlarmSegue" {
             guard let destinationVC = segue.destination as? AlarmDetailTableViewController,
             let indexPath = tableView.indexPathForSelectedRow else { return }
-            let alarm = AlarmContontroller.shared.alarms[indexPath.row]
+            let alarm = AlarmController.shared.alarms[indexPath.row]
             destinationVC.alarm = alarm
         }
     }
@@ -53,7 +55,12 @@ class AlarmListTableViewController: UITableViewController {
 extension AlarmListTableViewController: SwitchTableViewCellDelegate {
     func switchCellSwitchValueChanged(cell: SwitchTableViewCell) {
         guard let alarm = cell.alarm else { return }
-        AlarmContontroller.shared.toggleEnabled(for: alarm)
+        AlarmController.shared.toggleEnabled(for: alarm)
+        if alarm.enabled {
+            scheduleUserNotifications(for: alarm)
+        } else {
+            cancelUserNotifications(for: alarm)
+        }
         tableView.reloadData()
     }
 }

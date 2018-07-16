@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlarmDetailTableViewController: UITableViewController {
+class AlarmDetailTableViewController: UITableViewController, AlarmScheduler {
     
     //MARK: - Properties
     var alarm: Alarm? = nil
@@ -21,6 +21,11 @@ class AlarmDetailTableViewController: UITableViewController {
     @IBAction func enableButtonTapped(_ sender: UIButton) {
         guard let alarm = alarm else { return }
         AlarmController.shared.toggleEnabled(for: alarm)
+        if alarm.enabled {
+            scheduleUserNotifications(for: alarm)
+        } else {
+            cancelUserNotifications(for: alarm)
+        }
         updateViews()
     }
     
@@ -28,9 +33,12 @@ class AlarmDetailTableViewController: UITableViewController {
         guard let title = alarmNameTextField.text, let thisMorningAtMidnight = DateHelper.thisMorningAtMidnight else { return }
             let time = alarmDatePicker.date.timeIntervalSince(thisMorningAtMidnight)
         if let alarm = alarm {
+            cancelUserNotifications(for: alarm)
             AlarmController.shared.update(alarm: alarm, fireTimeFromMidnight: time, name: title)
+            scheduleUserNotifications(for: alarm)
         } else {
             let alarm = AlarmController.shared.addAlarm(fireTimeFromMidnight: time, name: title)
+            scheduleUserNotifications(for: alarm)
             self.alarm = alarm
         }
        let _ = navigationController?.popViewController(animated: true)

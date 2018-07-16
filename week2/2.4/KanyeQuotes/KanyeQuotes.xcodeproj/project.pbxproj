@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C5C52AE20F824860096367C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5C52AD20F824860096367C /* AppDelegate.swift */; };
+		3C5C52B320F824860096367C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5C52B120F824860096367C /* Main.storyboard */; };
+		3C5C52B820F824870096367C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5C52B620F824870096367C /* LaunchScreen.storyboard */; };
+		3C5C52C520F824CD0096367C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5C52C420F824CD0096367C /* CoreDataStack.swift */; };
+		3C5C52C820F824DB0096367C /* KanyeQuotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C5C52C620F824DB0096367C /* KanyeQuotes.xcdatamodeld */; };
+		3C5C52CA20F82C170096367C /* Quote+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5C52C920F82C170096367C /* Quote+Convenience.swift */; };
+		3C5C52CE20F82CCA0096367C /* QuoteListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5C52CD20F82CCA0096367C /* QuoteListTableViewController.swift */; };
+		3C5C52D320F82DE20096367C /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5C52D220F82DE20096367C /* ButtonTableViewCell.swift */; };
+		3C5C52D720F82ECE0096367C /* QuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5C52D620F82ECE0096367C /* QuoteController.swift */; };
+		3CA0B4F620F846FD007ECEB1 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA0B4F520F846FD007ECEB1 /* assets.xcassets */; };
+		3CA0B4F820F847A8007ECEB1 /* QuoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0B4F720F847A8007ECEB1 /* QuoteDetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C5C52AA20F824860096367C /* KanyeQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanyeQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C5C52AD20F824860096367C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3C5C52B220F824860096367C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C5C52B720F824870096367C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3C5C52B920F824870096367C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C5C52C420F824CD0096367C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		3C5C52C720F824DB0096367C /* KanyeQuotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KanyeQuotes.xcdatamodel; sourceTree = "<group>"; };
+		3C5C52C920F82C170096367C /* Quote+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quote+Convenience.swift"; sourceTree = "<group>"; };
+		3C5C52CD20F82CCA0096367C /* QuoteListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteListTableViewController.swift; sourceTree = "<group>"; };
+		3C5C52D220F82DE20096367C /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonTableViewCell.swift; path = ../../../../2.3/ProjectPlanning/ProjectPlanning/Views/ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		3C5C52D620F82ECE0096367C /* QuoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteController.swift; sourceTree = "<group>"; };
+		3CA0B4F520F846FD007ECEB1 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = assets.xcassets; path = KanyeQuotes/assets.xcassets; sourceTree = SOURCE_ROOT; };
+		3CA0B4F720F847A8007ECEB1 /* QuoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C5C52A720F824860096367C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C5C52A120F824860096367C = {
+			isa = PBXGroup;
+			children = (
+				3C5C52AC20F824860096367C /* KanyeQuotes */,
+				3C5C52AB20F824860096367C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3C5C52AB20F824860096367C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C5C52AA20F824860096367C /* KanyeQuotes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C5C52AC20F824860096367C /* KanyeQuotes */ = {
+			isa = PBXGroup;
+			children = (
+				3C5C52AD20F824860096367C /* AppDelegate.swift */,
+				3C5C52CB20F82CA10096367C /* CoreData */,
+				3C5C52CC20F82CA60096367C /* Models */,
+				3C5C52D120F82DCC0096367C /* Views */,
+				3C5C52CF20F82CCF0096367C /* Controllers */,
+				3C5C52C320F824BD0096367C /* Storyboards */,
+				3C5C52C120F8249C0096367C /* Resources */,
+			);
+			path = KanyeQuotes;
+			sourceTree = "<group>";
+		};
+		3C5C52C120F8249C0096367C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3CA0B4F520F846FD007ECEB1 /* assets.xcassets */,
+				3C5C52B620F824870096367C /* LaunchScreen.storyboard */,
+				3C5C52B920F824870096367C /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3C5C52C320F824BD0096367C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3C5C52B120F824860096367C /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3C5C52CB20F82CA10096367C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3C5C52C420F824CD0096367C /* CoreDataStack.swift */,
+				3C5C52C620F824DB0096367C /* KanyeQuotes.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3C5C52CC20F82CA60096367C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C5C52C920F82C170096367C /* Quote+Convenience.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3C5C52CF20F82CCF0096367C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C5C52D020F82CE20096367C /* View Controllers */,
+				3C5C52D820F82ED20096367C /* Model Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3C5C52D020F82CE20096367C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C5C52CD20F82CCA0096367C /* QuoteListTableViewController.swift */,
+				3CA0B4F720F847A8007ECEB1 /* QuoteDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3C5C52D120F82DCC0096367C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C5C52D220F82DE20096367C /* ButtonTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3C5C52D820F82ED20096367C /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C5C52D620F82ECE0096367C /* QuoteController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C5C52A920F824860096367C /* KanyeQuotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C5C52BC20F824870096367C /* Build configuration list for PBXNativeTarget "KanyeQuotes" */;
+			buildPhases = (
+				3C5C52A620F824860096367C /* Sources */,
+				3C5C52A720F824860096367C /* Frameworks */,
+				3C5C52A820F824860096367C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KanyeQuotes;
+			productName = KanyeQuotes;
+			productReference = 3C5C52AA20F824860096367C /* KanyeQuotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C5C52A220F824860096367C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = ETLanza;
+				TargetAttributes = {
+					3C5C52A920F824860096367C = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 3C5C52A520F824860096367C /* Build configuration list for PBXProject "KanyeQuotes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C5C52A120F824860096367C;
+			productRefGroup = 3C5C52AB20F824860096367C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C5C52A920F824860096367C /* KanyeQuotes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C5C52A820F824860096367C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C5C52B820F824870096367C /* LaunchScreen.storyboard in Resources */,
+				3C5C52B320F824860096367C /* Main.storyboard in Resources */,
+				3CA0B4F620F846FD007ECEB1 /* assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C5C52A620F824860096367C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C5C52D720F82ECE0096367C /* QuoteController.swift in Sources */,
+				3C5C52CA20F82C170096367C /* Quote+Convenience.swift in Sources */,
+				3CA0B4F820F847A8007ECEB1 /* QuoteDetailViewController.swift in Sources */,
+				3C5C52AE20F824860096367C /* AppDelegate.swift in Sources */,
+				3C5C52C520F824CD0096367C /* CoreDataStack.swift in Sources */,
+				3C5C52D320F82DE20096367C /* ButtonTableViewCell.swift in Sources */,
+				3C5C52CE20F82CCA0096367C /* QuoteListTableViewController.swift in Sources */,
+				3C5C52C820F824DB0096367C /* KanyeQuotes.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3C5C52B120F824860096367C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C5C52B220F824860096367C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3C5C52B620F824870096367C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C5C52B720F824870096367C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C5C52BA20F824870096367C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3C5C52BB20F824870096367C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C5C52BD20F824870096367C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LWP4U374KN;
+				INFOPLIST_FILE = "$(SRCROOT)/KanyeQuotes/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.Lanza.KanyeQuotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C5C52BE20F824870096367C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LWP4U374KN;
+				INFOPLIST_FILE = "$(SRCROOT)/KanyeQuotes/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.Lanza.KanyeQuotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C5C52A520F824860096367C /* Build configuration list for PBXProject "KanyeQuotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C5C52BA20F824870096367C /* Debug */,
+				3C5C52BB20F824870096367C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C5C52BC20F824870096367C /* Build configuration list for PBXNativeTarget "KanyeQuotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C5C52BD20F824870096367C /* Debug */,
+				3C5C52BE20F824870096367C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C5C52C620F824DB0096367C /* KanyeQuotes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C5C52C720F824DB0096367C /* KanyeQuotes.xcdatamodel */,
+			);
+			currentVersion = 3C5C52C720F824DB0096367C /* KanyeQuotes.xcdatamodel */;
+			path = KanyeQuotes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3C5C52A220F824860096367C /* Project object */;
+}

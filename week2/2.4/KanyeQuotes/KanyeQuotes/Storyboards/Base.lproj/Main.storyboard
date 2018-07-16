@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ipb-5f-9TP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quotes-->
+        <scene sceneID="b7j-4b-MJA">
+            <objects>
+                <tableViewController id="DGK-mR-CmJ" customClass="QuoteListTableViewController" customModule="KanyeQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gDa-E7-NGj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quoteCell" rowHeight="125" id="Jet-6L-VdN" customClass="ButtonTableViewCell" customModule="KanyeQuotes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="125"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jet-6L-VdN" id="kXj-vR-qfg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="zt2-KU-96D">
+                                            <rect key="frame" x="16" y="11" width="343" height="103"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="(quote)" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCP-h2-sLT">
+                                                    <rect key="frame" x="0.0" y="41.5" width="233" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrB-0r-S8g">
+                                                    <rect key="frame" x="240" y="0.0" width="103" height="103"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="103" id="L4V-2l-Hts"/>
+                                                        <constraint firstAttribute="width" constant="103" id="gby-JV-GJ3"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                    <state key="normal" backgroundImage="yesKanye"/>
+                                                    <connections>
+                                                        <action selector="buttonTapped:" destination="Jet-6L-VdN" eventType="touchUpInside" id="Jsh-2X-g8z"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="YrB-0r-S8g" secondAttribute="bottom" id="5dB-eA-8rI"/>
+                                                <constraint firstAttribute="trailing" secondItem="YrB-0r-S8g" secondAttribute="trailing" id="KyU-Jk-q7t"/>
+                                                <constraint firstItem="YrB-0r-S8g" firstAttribute="top" secondItem="zt2-KU-96D" secondAttribute="top" id="Vp9-gC-2eU"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zt2-KU-96D" firstAttribute="top" secondItem="kXj-vR-qfg" secondAttribute="topMargin" id="9mQ-Cs-uyB"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="zt2-KU-96D" secondAttribute="bottom" id="Oly-Ck-ACa"/>
+                                        <constraint firstItem="zt2-KU-96D" firstAttribute="leading" secondItem="kXj-vR-qfg" secondAttribute="leadingMargin" id="b3d-UR-uMz"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="zt2-KU-96D" secondAttribute="trailing" id="ggx-bO-5ua"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="completeButton" destination="YrB-0r-S8g" id="Zgh-Z8-BCX"/>
+                                    <outlet property="primaryLabel" destination="SCP-h2-sLT" id="oZi-AT-XxM"/>
+                                    <segue destination="cM5-Mo-Msq" kind="show" identifier="toQuoteDetailVC" id="0Ge-Hq-efj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DGK-mR-CmJ" id="BJj-IA-hSE"/>
+                            <outlet property="delegate" destination="DGK-mR-CmJ" id="ahE-Uv-f8l"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Quotes" id="evn-lC-djI">
+                        <barButtonItem key="rightBarButtonItem" title="New Quote" id="JYp-HW-Ec7">
+                            <connections>
+                                <action selector="newQuoteButtonPressed:" destination="DGK-mR-CmJ" id="nck-wh-DWI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tds-Nf-zjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="45"/>
+        </scene>
+        <!--Kanye Quote?-->
+        <scene sceneID="tvG-0x-OkH">
+            <objects>
+                <viewController id="cM5-Mo-Msq" customClass="QuoteDetailViewController" customModule="KanyeQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ih3-EQ-eQe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happyKanye" translatesAutoresizingMaskIntoConstraints="NO" id="ldY-Xn-ePv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quoteLabel" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVm-9U-t06">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Pq3-Ka-Lv5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5RL-kM-4ZW">
+                                <rect key="frame" x="0.0" y="571" width="375" height="96"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is this a Kanye Quote?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bf-Gm-YGQ">
+                                        <rect key="frame" x="45.5" y="0.0" width="284.5" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yesNoLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5C-Fr-oqa">
+                                        <rect key="frame" x="61.5" y="36" width="252.5" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7pl-6m-g94" firstAttribute="trailing" secondItem="bVm-9U-t06" secondAttribute="trailing" id="0Sh-0h-7mh"/>
+                            <constraint firstItem="7pl-6m-g94" firstAttribute="trailing" secondItem="5RL-kM-4ZW" secondAttribute="trailing" id="3XU-M2-alZ"/>
+                            <constraint firstItem="ldY-Xn-ePv" firstAttribute="leading" secondItem="7pl-6m-g94" secondAttribute="leading" id="4ay-v8-hpr"/>
+                            <constraint firstItem="5RL-kM-4ZW" firstAttribute="leading" secondItem="7pl-6m-g94" secondAttribute="leading" id="9ce-7n-vvO"/>
+                            <constraint firstItem="5RL-kM-4ZW" firstAttribute="bottom" secondItem="7pl-6m-g94" secondAttribute="bottom" id="Lb8-Ft-gLY"/>
+                            <constraint firstItem="ldY-Xn-ePv" firstAttribute="top" secondItem="7pl-6m-g94" secondAttribute="top" id="SFK-bs-ZmW"/>
+                            <constraint firstItem="bVm-9U-t06" firstAttribute="leading" secondItem="7pl-6m-g94" secondAttribute="leading" id="gt5-kX-CMX"/>
+                            <constraint firstItem="ldY-Xn-ePv" firstAttribute="trailing" secondItem="7pl-6m-g94" secondAttribute="trailing" id="i80-Hd-hgE"/>
+                            <constraint firstItem="bVm-9U-t06" firstAttribute="top" secondItem="7pl-6m-g94" secondAttribute="top" id="qHg-eS-hFd"/>
+                            <constraint firstAttribute="bottom" secondItem="ldY-Xn-ePv" secondAttribute="bottom" id="yHj-bH-eJD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7pl-6m-g94"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kanye Quote?" id="Sp4-jF-rfd"/>
+                    <connections>
+                        <outlet property="happySadKanyeImageView" destination="ldY-Xn-ePv" id="Yvs-pZ-aLl"/>
+                        <outlet property="quoteTextLabel" destination="bVm-9U-t06" id="8HD-aA-yw4"/>
+                        <outlet property="yesNoLabel" destination="c5C-Fr-oqa" id="zKa-k5-pZG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPy-m3-w0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1278" y="45"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Od7-Wn-lHg">
+            <objects>
+                <navigationController id="Ipb-5f-9TP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jZr-Ui-DDG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DGK-mR-CmJ" kind="relationship" relationship="rootViewController" id="1wO-AF-sQV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Re9-1c-Q7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-289" y="45"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="happyKanye" width="1200" height="630"/>
+        <image name="yesKanye" width="500" height="500"/>
+    </resources>
+</document>

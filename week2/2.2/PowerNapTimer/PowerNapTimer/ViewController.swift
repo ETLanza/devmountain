@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
             myTimer.stopTimer()
         } else {
             myTimer.startTimer(5)
+            createLocalNotification(5)
         }
     }
     
@@ -45,6 +47,7 @@ extension ViewController: MyTimerDelegate {
     
     func timerStopped() {
         updateButtonAndLabel()
+        cancelLocalNotifications()
     }
     
     func updateButtonAndLabel() {
@@ -78,8 +81,31 @@ extension ViewController {
             let timeAsString = textField.text!
             let timeAsDouble = Double(timeAsString)! * 60.0
             self.myTimer.startTimer(timeAsDouble)
+            self.createLocalNotification(timeAsDoublelet )
         }
         alert.addAction(snoozeButton)
         present(alert, animated: true, completion: nil)
+    }
+}
+
+extension ViewController {
+    func createLocalNotification(_ timeInterval: TimeInterval) {
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+        let content = UNMutableNotificationContent()
+        content.title = "Title"
+        content.subtitle = "Subtitle"
+        content.body = "Body"
+        content.sound = UNNotificationSound.default()
+        content.badge = 3
+        let request = UNNotificationRequest.init(identifier: "Power Nap", content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request) { (error) in
+                if let error = error {
+                    print("Error adding notification: \(error.localizedDescription)")
+                }
+        }
+    }
+    
+    func cancelLocalNotifications() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
 }
