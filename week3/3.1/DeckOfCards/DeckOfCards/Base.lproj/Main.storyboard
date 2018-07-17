@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rbs-zL-CZh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="EWR-Vw-kyn">
+            <objects>
+                <viewController id="rbs-zL-CZh" customClass="CardViewController" customModule="DeckOfCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8gE-ns-3YH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gAR-F3-20s">
+                                <rect key="frame" x="46" y="144.5" width="282" height="378"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="378" id="22a-4S-o04"/>
+                                    <constraint firstAttribute="width" constant="282" id="5pB-GY-OEC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7s-zm-SVZ">
+                                <rect key="frame" x="152" y="563" width="70" height="30"/>
+                                <state key="normal" title="Draw card"/>
+                                <connections>
+                                    <action selector="drawCardButtonTapped:" destination="rbs-zL-CZh" eventType="touchUpInside" id="mnB-hw-d2C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="A7s-zm-SVZ" firstAttribute="centerX" secondItem="gAR-F3-20s" secondAttribute="centerX" id="ePM-r2-ZFZ"/>
+                            <constraint firstItem="A7s-zm-SVZ" firstAttribute="top" secondItem="gAR-F3-20s" secondAttribute="bottom" constant="40.5" id="g77-cp-ohc"/>
+                            <constraint firstItem="gAR-F3-20s" firstAttribute="centerY" secondItem="8gE-ns-3YH" secondAttribute="centerY" id="rLA-uG-0tr"/>
+                            <constraint firstItem="gAR-F3-20s" firstAttribute="centerX" secondItem="8gE-ns-3YH" secondAttribute="centerX" id="y5s-tN-94Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CGb-lo-rMD"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="gAR-F3-20s" id="pW5-yF-Odm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cub-TV-It8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="51"/>
+        </scene>
+    </scenes>
+</document>
