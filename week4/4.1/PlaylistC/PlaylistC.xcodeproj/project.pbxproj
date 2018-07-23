@@ -12,6 +12,8 @@
 		3C098CC1210633C7004EEDFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C098CC0210633C7004EEDFA /* Assets.xcassets */; };
 		3C098CC4210633C7004EEDFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C098CC2210633C7004EEDFA /* LaunchScreen.storyboard */; };
 		3C098CC7210633C7004EEDFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C098CC6210633C7004EEDFA /* main.m */; };
+		3C098CD321063904004EEDFA /* ETLSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C098CD221063904004EEDFA /* ETLSong.m */; };
+		3C098CD62106390D004EEDFA /* ETLPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C098CD52106390D004EEDFA /* ETLPlaylist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		3C098CC3210633C7004EEDFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C098CC5210633C7004EEDFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C098CC6210633C7004EEDFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3C098CD121063904004EEDFA /* ETLSong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETLSong.h; sourceTree = "<group>"; };
+		3C098CD221063904004EEDFA /* ETLSong.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETLSong.m; sourceTree = "<group>"; };
+		3C098CD42106390D004EEDFA /* ETLPlaylist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETLPlaylist.h; sourceTree = "<group>"; };
+		3C098CD52106390D004EEDFA /* ETLPlaylist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETLPlaylist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 			children = (
 				3C098CB7210633C5004EEDFA /* AppDelegate.h */,
 				3C098CB8210633C5004EEDFA /* AppDelegate.m */,
+				3C098CD721063937004EEDFA /* Models */,
 				3C098CBD210633C5004EEDFA /* Main.storyboard */,
 				3C098CCD210634E5004EEDFA /* Resources */,
 			);
@@ -72,6 +79,17 @@
 				3C098CC6210633C7004EEDFA /* main.m */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3C098CD721063937004EEDFA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3C098CD42106390D004EEDFA /* ETLPlaylist.h */,
+				3C098CD52106390D004EEDFA /* ETLPlaylist.m */,
+				3C098CD121063904004EEDFA /* ETLSong.h */,
+				3C098CD221063904004EEDFA /* ETLSong.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +118,7 @@
 		3C098CAC210633C5004EEDFA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ETL;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = ETLanza;
 				TargetAttributes = {
@@ -145,7 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C098CC7210633C7004EEDFA /* main.m in Sources */,
+				3C098CD321063904004EEDFA /* ETLSong.m in Sources */,
 				3C098CB9210633C5004EEDFA /* AppDelegate.m in Sources */,
+				3C098CD62106390D004EEDFA /* ETLPlaylist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

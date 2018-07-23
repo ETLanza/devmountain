@@ -10,4 +10,10 @@
 
 @interface ETLSong : NSObject
 
+@property(nonatomic, copy) NSString* title;
+@property (nonatomic, copy) NSString* artist;
+
+- (instancetype) initWithName:(NSString *)title artist:(NSString *)artist;
+
+
 @end
