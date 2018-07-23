@@ -4,16 +4,16 @@ import UIKit
 
 class Person {
     
-    var name: String = ""
-    var age: Int = 0
-    var hasLice: Bool = false
-    var siblingNames: [String] = []
+    var name: String
+    var age: Int
+    var hasLice: Bool
+    var siblingNames: [String]
     
     init?(dictionary: [String: Any]) {
         guard let name = dictionary["name"] as? String,
             let age = dictionary["age"] as? Int,
             let hasLice = dictionary["hasLice"] as? Bool,
-            let siblingNames = dictionary["siblingNames"] as? [String] else { return }
+            let siblingNames = dictionary["siblingNames"] as? [String] else { return nil }
         self.name = name
         self.age = age
         self.hasLice = hasLice
@@ -43,20 +43,34 @@ let jsonString = """
 
 let data = jsonString.data(using: .utf8, allowLossyConversion: false)!
 
+func getJSONObject(data: Data, completion: @escaping (([String:Any]?) -> Void)) {
+    do {
+        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
+            completion(json)
+            return
+        }
+    } catch let error {
+        print("Error in JSONSerialization, \(error)")
+        completion(nil)
+        return
+    }
+}
+
 func jsonObject(data: Data) -> [String:Any]? {
     do {
         if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
             return json
         }
     } catch let error {
-        print("fuck errors, \(error)")
+        print("Error in JSONSerialization, \(error)")
     }
     return nil
 }
 
+let dictionary =  jsonObject(data: data)
 
-let person = jsonObject(data: data)
-person?["name"]
-person?["age"]
-person?["hasLice"]
-person?["siblingNames"]
+let derek = Person(dictionary: dictionary!)
+derek?.name
+derek?.age
+derek?.hasLice
+derek?.siblingNames
