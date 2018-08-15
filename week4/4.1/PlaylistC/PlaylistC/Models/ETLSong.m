@@ -10,7 +10,7 @@
 
 @implementation ETLSong
 
-- (instancetype)initWithName:(NSString *)title artist:(NSString *)artist
+- (instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist
 {
     self = [super init];
     if (self) {

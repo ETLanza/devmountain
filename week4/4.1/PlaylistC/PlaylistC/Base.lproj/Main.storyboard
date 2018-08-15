@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Main Table View Controller-->
         <scene sceneID="o1u-8m-rQm">
             <objects>
-                <tableViewController id="EBv-T9-e4a" sceneMemberID="viewController">
+                <tableViewController id="EBv-T9-e4a" customClass="ETLMainTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dJC-kj-QyZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,9 +73,16 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gPT-gz-JAJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qki-dH-Dre"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qki-dH-Dre">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="EBv-T9-e4a" id="l6j-bP-Rfo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="Q9B-KV-YQu" id="DUW-Sk-UEb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nr-H0-kCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,7 +91,7 @@
         <!--Title-->
         <scene sceneID="u9x-B1-LxX">
             <objects>
-                <tableViewController id="o3Z-4q-R0b" sceneMemberID="viewController">
+                <tableViewController id="o3Z-4q-R0b" customClass="ETLDetailTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xih-jV-fCC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,9 +159,17 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="WF9-UZ-bdO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EOc-rB-qZa"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EOc-rB-qZa">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="o3Z-4q-R0b" id="70o-Ln-PBn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="artistNameTextField" destination="j3O-z9-QGb" id="g6c-QI-l1k"/>
+                        <outlet property="songTitleTextField" destination="qKD-DI-t5O" id="VgF-LW-EaH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yan-tt-bPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
