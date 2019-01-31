@@ -49,5 +49,4 @@ class EntryListTableViewController: UITableViewController {
             destinationVC.journal = self.journal
         }
     }
-    
 }

@@ -13,7 +13,5 @@ class SongController {
     
     func createSongWith(title: String, artist: String, playlist: Playlist) {
         let moc = CoreDataStack.context
-        
-        
     }
 }

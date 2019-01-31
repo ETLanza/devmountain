@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C469F1A20EBB78C004A2E51 /* FlashlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C469F1920EBB78C004A2E51 /* FlashlightTests.swift */; };
 		3CF9F43320EAC49A000C3EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9F43220EAC49A000C3EB2 /* AppDelegate.swift */; };
 		3CF9F43520EAC49A000C3EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9F43420EAC49A000C3EB2 /* ViewController.swift */; };
 		3CF9F43820EAC49A000C3EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF9F43620EAC49A000C3EB2 /* Main.storyboard */; };
@@ -27,8 +26,6 @@
 
 /* Begin PBXFileReference section */
 		3C469F1720EBB78C004A2E51 /* FlashlightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashlightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C469F1920EBB78C004A2E51 /* FlashlightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashlightTests.swift; sourceTree = "<group>"; };
-		3C469F1B20EBB78C004A2E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CF9F42F20EAC49A000C3EB2 /* Flashlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF9F43220EAC49A000C3EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF9F43420EAC49A000C3EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,20 +53,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C469F1820EBB78C004A2E51 /* FlashlightTests */ = {
-			isa = PBXGroup;
-			children = (
-				3C469F1920EBB78C004A2E51 /* FlashlightTests.swift */,
-				3C469F1B20EBB78C004A2E51 /* Info.plist */,
-			);
-			path = FlashlightTests;
-			sourceTree = "<group>";
-		};
 		3CF9F42620EAC49A000C3EB2 = {
 			isa = PBXGroup;
 			children = (
 				3CF9F43120EAC49A000C3EB2 /* Flashlight */,
-				3C469F1820EBB78C004A2E51 /* FlashlightTests */,
 				3CF9F43020EAC49A000C3EB2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -205,7 +192,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C469F1A20EBB78C004A2E51 /* FlashlightTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

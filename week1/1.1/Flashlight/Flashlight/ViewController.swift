@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var toggleButton: UIButton!
     
+    let gestureRecognizer = UISwipeGestureRecognizer()
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         if isOn {
             return .default
@@ -35,14 +37,13 @@ class ViewController: UIViewController {
             toggleButton.setTitle("On", for: .normal)
             toggleButton.setTitleColor(UIColor.white, for: .normal)
             toggleTorch(on: false)
-            setNeedsStatusBarAppearanceUpdate()
         } else {
             view.backgroundColor = UIColor.white
             toggleButton.setTitle("Off", for: .normal)
             toggleButton.setTitleColor(UIColor.black, for: .normal)
             toggleTorch(on: true)
-            setNeedsStatusBarAppearanceUpdate()
         }
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     func toggleTorch(on: Bool) {
@@ -79,8 +80,17 @@ class ViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
         toggleFlashlight()
     }
-    @IBAction func toggleTapGesture(_ sender: UITapGestureRecognizer) {
-        toggleFlashlight()
+    
+    @IBAction func swippedLeft(_ sender: UISwipeGestureRecognizer) {
+        if isOn {
+            toggleFlashlight()
+        }
+    }
+    
+    @IBAction func swippedRight(_ sender: UISwipeGestureRecognizer) {
+        if !isOn {
+            toggleFlashlight()
+        }
     }
 }
 

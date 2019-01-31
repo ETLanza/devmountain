@@ -1,5 +1,5 @@
 //
-//  JournalController.swift
+// zJournalController.swift
 //  Journal
 //
 //  Created by Eric Lanza on 7/5/18.

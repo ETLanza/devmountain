@@ -26,7 +26,7 @@ class StateDetailTableViewController: UITableViewController {
             UIApplication.shared.isNetworkActivityIndicatorVisible = true
             title = state
             RepresentativeController.searchRepresentatives(forState: state) { (repArray) in
-                guard let repArray = repArray else { return }
+                
                 self.reps = repArray
                 
                 DispatchQueue.main.async {

@@ -12,15 +12,15 @@ class Entry: Equatable, Codable {
     
     var title: String
     var bodyText: String
-    let timeStamp: Date
+    let timestamp: Date
     
-    init(title: String, bodyText: String) {
+    init(title: String, bodyText: String, timestamp: Date = Date()) {
         self.title = title
         self.bodyText = bodyText
-        self.timeStamp = Date()
+        self.timestamp = timestamp
     }
 
     static func == (lhs: Entry, rhs: Entry) -> Bool {
-        return (lhs.title == rhs.title && lhs.bodyText == rhs.bodyText && lhs.timeStamp == rhs.timeStamp)
+        return (lhs.title == rhs.title && lhs.bodyText == rhs.bodyText && lhs.timestamp == rhs.timestamp)
     }
 }

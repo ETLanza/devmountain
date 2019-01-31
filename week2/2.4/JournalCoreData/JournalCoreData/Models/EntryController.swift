@@ -8,6 +8,13 @@
 
 import Foundation
 import CoreData
+extension NSError {
+    
+}
+
+extension Error {
+    
+}
 
 class EntryController {
     

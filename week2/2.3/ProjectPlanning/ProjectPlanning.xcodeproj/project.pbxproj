@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C546F06220261DA00602F92 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C546F05220261DA00602F92 /* ButtonTableViewCell.swift */; };
 		3C5C52A020F7FF350096367C /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5C529F20F7FF350096367C /* TaskListTableViewController.swift */; };
 		3CFBCD9720F697A300D221E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBCD9620F697A300D221E0 /* AppDelegate.swift */; };
 		3CFBCD9C20F697A300D221E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFBCD9A20F697A300D221E0 /* Main.storyboard */; };
@@ -18,10 +19,10 @@
 		3CFBCDB920F6996300D221E0 /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBCDB820F6996300D221E0 /* Task+Convenience.swift */; };
 		3CFBCDBB20F69A0A00D221E0 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBCDBA20F69A0A00D221E0 /* TaskController.swift */; };
 		3CFBCDBE20F6A0C700D221E0 /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBCDBD20F6A0C700D221E0 /* DateHelpers.swift */; };
-		3CFBCDC020F6A48700D221E0 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBCDBF20F6A48700D221E0 /* ButtonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C546F05220261DA00602F92 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonTableViewCell.swift; path = ../../../../2.5/ShoppingList/ShoppingList/Views/ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		3C5C529F20F7FF350096367C /* TaskListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
 		3CFBCD9320F697A300D221E0 /* ProjectPlanning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectPlanning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CFBCD9620F697A300D221E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		3CFBCDB820F6996300D221E0 /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
 		3CFBCDBA20F69A0A00D221E0 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		3CFBCDBD20F6A0C700D221E0 /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
-		3CFBCDBF20F6A48700D221E0 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,7 @@
 		3CFBCDC120F6A49900D221E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3CFBCDBF20F6A48700D221E0 /* ButtonTableViewCell.swift */,
+				3C546F05220261DA00602F92 /* ButtonTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,12 +213,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C5C52A020F7FF350096367C /* TaskListTableViewController.swift in Sources */,
-				3CFBCDC020F6A48700D221E0 /* ButtonTableViewCell.swift in Sources */,
 				3CFBCDBB20F69A0A00D221E0 /* TaskController.swift in Sources */,
 				3CFBCDB720F698D600D221E0 /* CoreDataStack.swift in Sources */,
 				3CFBCDB920F6996300D221E0 /* Task+Convenience.swift in Sources */,
 				3CFBCD9F20F697A300D221E0 /* ProjectPlanning.xcdatamodeld in Sources */,
 				3CFBCDBE20F6A0C700D221E0 /* DateHelpers.swift in Sources */,
+				3C546F06220261DA00602F92 /* ButtonTableViewCell.swift in Sources */,
 				3CFBCD9720F697A300D221E0 /* AppDelegate.swift in Sources */,
 				3CFBCDB520F698BE00D221E0 /* TaskDetailTableViewController.swift in Sources */,
 			);
@@ -365,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LWP4U374KN;
 				INFOPLIST_FILE = "$(SRCROOT)/ProjectPlanning/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -382,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LWP4U374KN;
 				INFOPLIST_FILE = "$(SRCROOT)/ProjectPlanning/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

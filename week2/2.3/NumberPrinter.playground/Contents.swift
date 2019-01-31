@@ -73,6 +73,11 @@ func numberToBreakDown(_ number:Int) -> [Int] {
 
 func printArrayOnOneLine(_ array: [Int]) {
     var arrayOfArrays: [[String]] = []
+    stringZero = ""
+    stringOne = ""
+    stringTwo = ""
+    stringThree = ""
+    stringFour = ""
     for i in array {
         var x = [String]()
         switch i {
@@ -112,6 +117,7 @@ func printArrayOnOneLine(_ array: [Int]) {
 }
 
 printArrayOnOneLine(numberToBreakDown(1234567890))
+printArrayOnOneLine([1,5,7,3,7,4,8,3,8,9,3,0,1,5])
 
 
 func numberPrinter(number: Int) -> [String]{
@@ -148,7 +154,6 @@ func numberPrinterOnArray(_ array: [Int]) {
     
 }
 print("")
-let array = compactMap(number: 1234567890)
 
-//let array = compactMap(number: 1234567890123456789)
+let array = compactMap(number: 1234567890123456789)
 numberPrinterOnArray(array)

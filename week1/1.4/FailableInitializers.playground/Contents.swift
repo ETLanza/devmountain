@@ -12,8 +12,8 @@ class Person {
         self.name = name
         self.age = age
         self.favoriteMovie = favoriteMovie
-        
     }
+    
     init?(_ dictionary: [String:Any]) {
         guard let name = dictionary["nameKey"] as? String,
             let age = dictionary["ageKey"] as? Int,

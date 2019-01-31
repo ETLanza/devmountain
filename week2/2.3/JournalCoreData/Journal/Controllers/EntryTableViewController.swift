@@ -31,12 +31,11 @@ class EntryTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             EntryController.shared.remove(entry: EntryController.shared.entries[indexPath.row])
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-        }
+        } 
     }
     
     // MARK: - Navigation

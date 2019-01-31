@@ -20,7 +20,6 @@ struct StarWarsCharacter: Codable {
     let profilePicture: String?
     let forceSensitive: Bool
     let affiliation: String
-    
 }
 
 extension StarWarsCharacter {

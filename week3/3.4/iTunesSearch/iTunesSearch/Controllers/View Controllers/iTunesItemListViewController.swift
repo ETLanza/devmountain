@@ -20,7 +20,6 @@ class iTunesItemListViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         searchBar.delegate = self
-        
     }
 }
 
@@ -38,7 +37,6 @@ extension iTunesItemListViewController: UITableViewDataSource {
         iTunesItemController.getImage(for: iTunesItem) { (image) in
             cell.iTunesItemImage = image
         }
-        
         cell.iTunesItem = iTunesItem
         
         return cell

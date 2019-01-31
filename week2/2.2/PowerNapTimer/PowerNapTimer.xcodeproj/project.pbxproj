@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C52765021B06921005815FE /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52764F21B06921005815FE /* AlertManager.swift */; };
 		3C608E8820F513060004D9F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C608E8720F513060004D9F2 /* AppDelegate.swift */; };
 		3C608E8D20F513060004D9F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C608E8B20F513060004D9F2 /* Main.storyboard */; };
 		3C608E8F20F513070004D9F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C608E8E20F513070004D9F2 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C52764F21B06921005815FE /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		3C608E8420F513060004D9F2 /* PowerNapTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerNapTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C608E8720F513060004D9F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C608E8C20F513060004D9F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				3C608E8720F513060004D9F2 /* AppDelegate.swift */,
 				3CADFE6420F5167F00C6C6A8 /* ViewController.swift */,
+				3C52764F21B06921005815FE /* AlertManager.swift */,
 				3CADFE6820F5313500C6C6A8 /* NotificationManager.swift */,
 				3CADFE6620F516A800C6C6A8 /* MyTimer.swift */,
 				3C608E9A20F5131A0004D9F2 /* Storyboards */,
@@ -159,6 +162,7 @@
 			files = (
 				3CADFE6520F5167F00C6C6A8 /* ViewController.swift in Sources */,
 				3CADFE6720F516A800C6C6A8 /* MyTimer.swift in Sources */,
+				3C52765021B06921005815FE /* AlertManager.swift in Sources */,
 				3CADFE6920F5313500C6C6A8 /* NotificationManager.swift in Sources */,
 				3C608E8820F513060004D9F2 /* AppDelegate.swift in Sources */,
 			);

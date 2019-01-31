@@ -41,7 +41,7 @@ class PlaylistController: Codable {
     func fileURL() -> URL {
         
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        
+        print(paths)
         let documentDirectory = paths[0]
         
         let playlistLocation = "playlist.json"

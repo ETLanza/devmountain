@@ -20,6 +20,7 @@ class FriendDetailViewController: UIViewController {
     @IBAction func sliderDidChange(_ sender: UISlider) {
         let raiting = Int(sender.value)
         ratingLabel.text = "\(raiting)"
+        
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {

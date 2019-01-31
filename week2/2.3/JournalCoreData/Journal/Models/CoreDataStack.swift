@@ -22,3 +22,12 @@ enum CoreDataStack {
     
     static var context: NSManagedObjectContext { return container.viewContext }
 }
+
+//MARK: - Persistence
+private func saveToPersistentStore() {
+    do{
+        try CoreDataStack.context.save()
+    } catch let error {
+        print("Error saving to persistent store: \(error.localizedDescription)")
+    }
+}

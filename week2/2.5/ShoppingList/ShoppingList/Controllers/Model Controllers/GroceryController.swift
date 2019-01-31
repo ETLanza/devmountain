@@ -35,7 +35,7 @@ class GroceryController {
     
     //MARK: - CRUD Functions
     func createGroceryWith(name: String, category: String = "Grocery") {
-        let _ = Grocery(name: name, category: category)
+        _ = Grocery(name: name, category: category)
         saveToPersistentStore()
     }
     

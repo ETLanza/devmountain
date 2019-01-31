@@ -37,7 +37,7 @@ class EntryViewController: UIViewController, UITextFieldDelegate{
     //MARK: Properties
     
     var entry: Entry?
-    var journal: Journal?
+//    var journal: Journal?
     
     override func viewDidLoad() {
         super.viewDidLoad()

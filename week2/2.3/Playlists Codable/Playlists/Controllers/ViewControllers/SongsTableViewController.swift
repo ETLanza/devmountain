@@ -45,7 +45,7 @@ class SongsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath)
         
         // Configure the cell...
-        guard let songs = playlist.songs?.allObjects as? [Song]else { return UITableViewCell() }
+        guard let songs = playlist.songs?.allObjects as? [Song] else { return UITableViewCell() }
         let songForCell = songs[indexPath.row]
         cell.textLabel?.text = songForCell.title
         cell.detailTextLabel?.text = songForCell.artist
@@ -58,7 +58,7 @@ class SongsTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            guard let songs = playlist.songs?.allObjects as? [Song]else { return  }
+            guard let songs = playlist.songs?.allObjects as? [Song] else { return  }
             let songToDelete = songs[indexPath.row]
             SongController.delete(song: songToDelete)
             tableView.deleteRows(at: [indexPath], with: .fade)

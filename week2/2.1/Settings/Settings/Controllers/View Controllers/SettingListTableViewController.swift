@@ -25,8 +25,8 @@ class SettingListTableViewController: UITableViewController {
         
         let setting = SettingsController.shared.settings[indexPath.row]
         
-        cell.setting = setting
         cell.delegate = self
+        cell.setting = setting
         
         return cell
     }

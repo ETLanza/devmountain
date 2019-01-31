@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVr-if-9Nj">
-                                <rect key="frame" x="161.5" y="317" width="53" height="32"/>
+                                <rect key="frame" x="161" y="317.5" width="53" height="32"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="4vg-Zh-qrM"/>
@@ -41,7 +41,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="sDC-RK-OXW" appends="YES" id="s7l-g1-dXq"/>
+                            <outletCollection property="gestureRecognizers" destination="VHI-c0-bhQ" appends="YES" id="N6z-Hx-Pgk"/>
+                            <outletCollection property="gestureRecognizers" destination="Mb2-87-i42" appends="YES" id="iEK-G5-MKl"/>
                         </connections>
                     </view>
                     <connections>
@@ -49,11 +50,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="sDC-RK-OXW">
+                <swipeGestureRecognizer direction="left" id="VHI-c0-bhQ">
                     <connections>
-                        <action selector="toggleTapGesture:" destination="BYZ-38-t0r" id="qs6-Az-Ebg"/>
+                        <action selector="swippedLeft:" destination="BYZ-38-t0r" id="8Cc-ey-OFW"/>
                     </connections>
-                </tapGestureRecognizer>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Mb2-87-i42">
+                    <connections>
+                        <action selector="swippedRight:" destination="BYZ-38-t0r" id="taU-tN-UoU"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>

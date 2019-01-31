@@ -26,11 +26,7 @@ class ButtonTableViewCell: UITableViewCell {
         let imageName = isInCart ? "complete" : "incomplete"
         completeButton.setBackgroundImage(UIImage(named: imageName), for: .normal)
     }
-
-    func update(withGrocery grocery: Grocery) {
-        primaryLabel.text = grocery.name
-        updateButton(grocery.isInCart)
-    }
+    
 }
 //MARK: - Custom Delegate
 protocol  ButtonTableViewCellDelegate {

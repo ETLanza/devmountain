@@ -37,6 +37,4 @@ class StateListTableViewController: UITableViewController {
             destinationVC.state = States.all[index.row]
         }
     }
-    
-    
 }

@@ -6,7 +6,6 @@
 //  Copyright © 2018 ETLanza. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import CloudKit
 
@@ -91,7 +90,6 @@ class CloudKitManager {
     
     
     // MARK: - Fetch Records
-    
     func fetchRecord(withID recordID: CKRecordID, database: CKDatabase, completion: ((_ record: CKRecord?, _ error: Error?) -> Void)?) {
         
         database.fetch(withRecordID: recordID) { (record, error) in

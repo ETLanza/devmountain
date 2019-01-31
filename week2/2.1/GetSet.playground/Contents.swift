@@ -2,7 +2,6 @@
 
 import UIKit
 
-
 let date = NSDateComponents()
 let calendar = Calendar.current
 date.year = calendar.component(.year, from: Date())
@@ -24,6 +23,7 @@ struct Person {
 }
 
 var eric = Person(firstName: "Eric", lastName: "Lanza", yearOfBirth: 1991)
+print("\(eric.firstName) \(eric.lastName) was born in \(eric.yearOfBirth)")
 print(eric.age)
 eric.age = 10
 print(eric.yearOfBirth)

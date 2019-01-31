@@ -66,7 +66,6 @@ extension TaskListTableViewController: ButtonTableViewCellDelegate {
         guard let index = tableView.indexPath(for: sender) else { return }
         let task = TaskController.shared.fetchedResultsController.object(at: index)
         TaskController.shared.toggleIsCompleteFor(task: task)
-        sender.update(withTask: task)
     }
 }
 
